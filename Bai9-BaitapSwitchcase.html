@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh Switch Case</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input type="number" id="month"/></td>
+        <td><button type="button" onclick="countday1();">Tính số ngày</button></td>
+    </tr>
+</table>
+<p><b><label id="countday30"></label></b></p>
+<script>
+    function countday1() {
+        let countday30;
+        let thang=parseInt(document.getElementById("month").value);
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                countday30 = 31;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                countday30 = 30;
+                break;
+            case 2:
+                countday30 = "28 hoặc 29"
+        }
+        document.getElementById("countday30").innerHTML=("Tháng " + thang + " có " + countday30 + " ngày.");
+    }
+</script>
+</body>
+</html>
